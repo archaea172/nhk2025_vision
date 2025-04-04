@@ -1,1 +1,0 @@
-corners, ids, rejectedCandidates = aruco.detectMarkers(frame, dictionary, parameters=parameters)
