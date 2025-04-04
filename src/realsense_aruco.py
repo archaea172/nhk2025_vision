@@ -57,7 +57,8 @@ def main():
 
             # デプス画像をカラーマップに変換
             depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
-            corners, ids, rejectedCandidates = aruco.detectMarkers(color_image, dictionary, parameters=parameters)
+            corners, ids, rejectedCandidates = aruco.detectMarkers(color_image, dictionary, parameters=parameters
+                                                                   )
             filter_frame = decimate.process(depth_frame)
             filter_frame = depth_to_disparity.process(filter_frame)
             filter_frame = spatial.process(filter_frame)
